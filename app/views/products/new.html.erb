@@ -1,0 +1,9 @@
+<div class="booyah-box col-10 offset-1">
+	<h1>Enter Product Details</h1>
+	<%= simple_form_for @product do |f| %>
+	  <%= f.input :item %>
+	  <%= f.input :description %>
+	  <%= f.input :rating, collection: 1..5 %><br>
+	  <%= f.submit 'Create', class: 'btn btn-primary' %>
+	<% end %>
+</div>
