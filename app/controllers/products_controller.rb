@@ -9,12 +9,12 @@ class ProductsController < ApplicationController
 
 	def create
 		Product.create(product_params)
+		redirect_to root_path
 	end
 
 	private
 
 	def product_params
-		params.require(:product, :description, :rating)
+		params.require(:product).permit(:item, :description, :rating)
 	end
-
 end
