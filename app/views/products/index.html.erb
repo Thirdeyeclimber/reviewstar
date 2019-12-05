@@ -1,8 +1,14 @@
-<% @products.each do |product| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= product.item %></h1>
-    <h3><%=product.rating %> stars</h3>
-    <p><%= product.description %></p>
-  </div>
+<div class="container">
   <br>
-<% end %>
+  <h1>Products</h1>
+  <% @products.each do |product| %>
+    <div class="booyah-box col-10 offset-1">
+      <h1><%= product.item %></h1>
+      <h3><%=product.rating %> ⭐️</h3>
+      <p><%= product.description %></p>
+      <small class="float-right">Submitted: <%= product.created_at.to_date %> Id: <%= product.product_id%></small>
+
+    </div>
+    <br>
+  <% end %>
+</div>
